@@ -76,7 +76,7 @@ const Table = (props: TableProps) => {
             <tbody className="divide-y divide-gray-800">
             {translated.map((t, index) => (
               <tr key={index} className={"even:bg-gray-800"}>
-                <td className="py-4 pl-4 pr-3 text-sm font-medium text-white w-64 break-keep">
+                <td className="py-4 pl-4 pr-3 text-sm font-semibold text-white w-64 break-keep">
                   {t.ko}
                 </td>
                 <td className="px-3 py-4 text-sm text-gray-300 w-64 break-keep">
