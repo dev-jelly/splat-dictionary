@@ -1,11 +1,9 @@
 {
-  "name": "Splat Dictionary",
+  "name": "splat-dictionary",
   "version": "1.0.0",
   "description": "Splat Dictionary",
-
-  "author": "Devjelly <josepvidalvidal@gmail.com>",
+  "author": "Devjelly <chm073@gmail.com>",
   "license": "MIT",
-
   "keywords": [
     "react",
     "vite",
@@ -33,8 +31,7 @@
     "build": "tsc && vite build",
     "test": "vitest",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview",
-    "postinstall": "husky install"
+    "preview": "vite preview"
   },
   "dependencies": {
     "@heroicons/react": "2.0.18",
