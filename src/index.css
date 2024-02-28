@@ -27,3 +27,18 @@
     animation: slide 4s linear infinite;
   }
 }
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  border: 1px solid black;
+  padding: 8px;
+  text-align: left;
+  white-space: normal; /* 텍스트가 넘칠 경우 자동으로 줄바꿈 */
+  word-wrap: break-word; /* 긴 단어가 넘칠 경우 단어 내에서 줄바꿈 */
+  word-break: break-all; /* 필요한 경우 단어 경계에서도 줄바꿈 */
+}

@@ -12,7 +12,7 @@ export function SearchResult(props: SearchResultProps) {
   const { isPending, error, data } = useQuery<Result>({
     queryKey: [props.query],
     queryFn: () =>
-      fetch("https://zgmpxxotlznrdmdrzuxp.supabase.co/functions/v1/all?q=salmon").then((res) =>
+      fetch("https://zgmpxxotlznrdmdrzuxp.supabase.co/functions/v1/all?q="+props.query).then((res) =>
         res.json()
       )
   });
@@ -59,16 +59,16 @@ const Table = (props: TableProps) => {
     <div className="mt-8 flow-root">
       <div className="-mx-4 -my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
         <div className="inline-block min-w-full py-2 align-middle sm:px-6 lg:px-8">
-          <table className="min-w-full divide-y divide-gray-300">
+          <table className="min-w-full divide-y divide-gray-300 max-w-full">
             <thead className={"bg-gray-500"}>
             <tr>
-              <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white sm:pl-0">
+              <th scope="col" className="py-3.5 pl-4 pr-3 text-left text-sm font-semibold text-white w-64">
                 한국어
               </th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
+              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white w-64">
                 영어
               </th>
-              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white">
+              <th scope="col" className="px-3 py-3.5 text-left text-sm font-semibold text-white w-64 break-keep">
                 일본어
               </th>
             </tr>
@@ -76,14 +76,14 @@ const Table = (props: TableProps) => {
             <tbody className="divide-y divide-gray-800">
             {translated.map((t, index) => (
               <tr key={index} className={"even:bg-gray-800"}>
-                <td className="whitespace-nowrap py-4 pl-4 pr-3 text-sm font-medium text-white sm:pl-0">
+                <td className="py-4 pl-4 pr-3 text-sm font-medium text-white w-64 break-keep">
                   {t.ko}
                 </td>
-                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
+                <td className="px-3 py-4 text-sm text-gray-300 w-64 break-keep">
                   <HighlightText text={t.en} highlight={keyword} />
                 </td>
-                <td className="whitespace-nowrap px-3 py-4 text-sm text-gray-300">
-                  <HighlightText text={t.en} highlight={keyword} />
+                <td className="px-3 py-4 text-sm text-gray-300 w-64">
+                  <HighlightText text={t.ja} highlight={keyword} />
                 </td>
               </tr>
             ))}
