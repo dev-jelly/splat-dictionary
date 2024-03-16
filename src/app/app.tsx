@@ -24,7 +24,7 @@ function App() {
         </a>
         </h1>
         <p className="max-w-screen-lg text-lg sm:text-xl  text-gray-300 font-medium mb-10 sm:mb-11">
-          번역하고 싶은 스플래툰의 단어를 입력해주세요.
+          번역하고 싶은 스플래툰의 단어를 입력해주세요. (영어 또는 일본어)
         </p>
         <div className="absolute top-12 right-12 opacity-10 lg:opacity-50"></div>
       </header>
